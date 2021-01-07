@@ -32,6 +32,5 @@ jobs:
         repository: Etherealand/PE2HEX
         path: PE2HEX
     - name: python run
-      run: 'cd ./PE2HEX && sudo python run PE2HEX.py'
-    - name: show file list
-      run: 'sudo ls -lrt . '
+      run: 'cd ./PE2HEX &&  && sudo ls -lrt . &&python -version'
+ 
