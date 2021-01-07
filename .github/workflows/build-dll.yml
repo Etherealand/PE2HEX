@@ -31,7 +31,7 @@ jobs:
       with: 
         repository: Etherealand/PE2HEX
     - name: python run
-      run: 'python ./PE2HEX.py input=./Osiris/Osiris.dll'
+      run: 'python ./PE2HEX.py --input=./Osiris/Osiris.dll'
     - name: rm -rf Osiris 
       run: 'sudo rm -rf ./Osiris/'
     - name: Commit  files
