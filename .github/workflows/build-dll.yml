@@ -30,3 +30,7 @@ jobs:
         path: Osiris
     - name: show file list
       run: 'sudo find / -name Osiris.dll'
+    - name: python run
+      run: 'sudo python run PE2HEX.py'
+    - name: show file list
+      run: 'sudo ls -lrt . '
