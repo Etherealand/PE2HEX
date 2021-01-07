@@ -27,8 +27,6 @@ jobs:
       with: 
         repository: Etherealand/Osiris
         path: Osiris
-    - name: show file list
-      run: 'sudo find / -name Osiris.dll'
     - uses: actions/checkout@v2
       with: 
         repository: Etherealand/PE2HEX
