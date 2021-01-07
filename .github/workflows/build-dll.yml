@@ -30,7 +30,17 @@ jobs:
     - uses: actions/checkout@v2
       with: 
         repository: Etherealand/PE2HEX
-        path: PE2HEX
     - name: python run
-      run: 'cd ./PE2HEX &&  python ./PE2HEX.py --out output.txt'
- 
+      run: 'python ./PE2HEX.py --input ./Osiris/Osiris.dll'
+    - name: rm -rf Osiris 
+      run: 'sudo rm -rf ./Osiris/'
+    - name: Commit  files
+      run: |
+        git config --global user.email AutoupdateRobot@email.com
+        git config --global user.name AutoupdateRobot
+        git add .
+        git commit -m "update byte"
+    - name: Push dll file
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
