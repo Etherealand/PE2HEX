@@ -2,13 +2,13 @@ import argparse
 
 parser = argparse.ArgumentParser(
     description='PE2HEX - PE executable to byte array converter')
-parser.add_argument('input', type=str,
+parser.add_argument('--input', type=str,
                     help='Input PE filename or full path')
 parser.add_argument('--out', default='output.txt', type=str,
                     help='Output filename or full path')
 parser.add_argument('--key', default='\0', type=str,
                     help='Encryption key ascii string')
-
+print(args.)
 args = parser.parse_args()
 file = bytearray(open(args.input, 'rb').read())
 
