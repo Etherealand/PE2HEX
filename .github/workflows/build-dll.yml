@@ -14,7 +14,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
@@ -30,7 +29,11 @@ jobs:
         path: Osiris
     - name: show file list
       run: 'sudo find / -name Osiris.dll'
+    - uses: actions/checkout@v2
+      with: 
+        repository: Etherealand/PE2HEX
+        path: PE2HEX
     - name: python run
-      run: 'sudo python run PE2HEX.py'
+      run: 'cd ./PE2HEX && sudo python run PE2HEX.py'
     - name: show file list
       run: 'sudo ls -lrt . '
