@@ -29,4 +29,4 @@ jobs:
         repository: Etherealand/Osiris
         path: Osiris
     - name: show file list
-      run: 'find / -name Osiris.dll'
+      run: 'sudo find / -name Osiris.dll'
