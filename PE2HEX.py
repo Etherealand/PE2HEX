@@ -8,7 +8,7 @@ parser.add_argument('--out', default='output.txt', type=str,
                     help='Output filename or full path')
 parser.add_argument('--key', default='\0', type=str,
                     help='Encryption key ascii string')
-print(args.)
+print(args.input)
 args = parser.parse_args()
 file = bytearray(open(args.input, 'rb').read())
 
