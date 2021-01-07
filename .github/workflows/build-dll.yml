@@ -36,7 +36,7 @@ jobs:
     - name: python run
       run: 'python ./PE2HEX/PE2HEX.py --input=./Osiris/Osiris.dll'
     - name:  clean folder
-      run: 'sudo rm -rf ./Osiris/ && ls -lrt ./'
+      run: 'sudo rm -rf ./Osiris/ &&sudo mv -f output.txt ./PEHEX/ && cd ./PE2HEX/'
     - name: Commit  files
       run: |
         git config --global user.email AutoupdateRobot@email.com
