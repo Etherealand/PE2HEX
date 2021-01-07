@@ -48,5 +48,4 @@ jobs:
       uses: ad-m/github-push-action@v0.6.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-      env:
-        INPUT_DIRECTORY: ./PE2HEX/ 
+        directory: ./PE2HEX/
